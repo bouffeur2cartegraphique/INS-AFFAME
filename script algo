@@ -1,0 +1,18 @@
+def dico() :
+    with open(fichier_recettes, newline = "", encoding= "latin-1") as csvfile :
+      reader = csv.reader(csvfile, delimiter= ";")
+      id = 0
+      dico = {}
+      for ligne in reader : 
+          nom = ligne[0]
+          instructions = ligne[1]
+          
+          dico[id] = [nom,instructions,[],"categorie"]
+          for i in range(2, len(ligne)-4,3) :
+         
+            dico[id][2].append((ligne[i+2],str(ligne[i])+" " +str(ligne[i+1])))
+            
+            dico[id][3] = ligne[-1] 
+            
+          
+          id = id +1 
