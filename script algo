@@ -1,4 +1,4 @@
-def dico() :
+def dico() : #code fonctionnel
     with open(fichier_recettes, newline = "", encoding= "latin-1") as csvfile :
       reader = csv.reader(csvfile, delimiter= ";")
       id = 0
@@ -16,3 +16,5 @@ def dico() :
             
           
           id = id +1 
+
+self.fruits=self.canvas.create_image((20,20), (40,40), image="Fruits.jfif") #code bugué, surement a cause du nom du fichier
